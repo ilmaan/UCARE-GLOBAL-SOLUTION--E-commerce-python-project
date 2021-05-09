@@ -14,17 +14,20 @@
 
     <!--FontAwesome CSS-->
     <link rel="stylesheet" href="{% static 'app/css/all.min.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
     <!--Custom CSS-->
     <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
 
 
-    <title>GeekGlobal | {% block title %} {% endblock title %} </title>
+    <title>UCARE-Global Solutions | {% block title %} {% endblock title %} </title>
   </head>
-  <body>
+  <body style="font-family: 'Poppins';">
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
      <div class="container">
-       <a class="navbar-brand" href="/">GeekGlobal</a>
+       <a class="navbar-brand" href="/"><img src="{% static 'app/images/logo.png' %}" alt="" srcset=""></a>
        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
        </button>
@@ -35,11 +38,11 @@
            </li>
            <li class="nav-item dropdown">
              <a class="nav-link dropdown-toggle text-white" href="#" id="electronicsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-               Electronics
+               Categories
              </a>
              <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
-               <li><a class="dropdown-item" href="{% url 'mobile' %}">Mobile</a></li>
-               <li><a class="dropdown-item" href="#">Laptop</a></li>
+               <li><a class="dropdown-item" href="{% url 'laptop' %}">Laptop</a></li>
+               <li><a class="dropdown-item" href="#">Printers</a></li>
              </ul>
            </li>
            <li class="nav-item dropdown">
@@ -89,8 +92,16 @@
 
     <!-- Start Footer -->
     <footer class="container-fluid bg-dark text-center p-2 mt-5">
-        <small class="text-white">Copyright &copy; 2021 || Designed By GeekyShows || </small>
-        <img src="{% static 'app/images/payment.png' %}" alt="" srcset="" class="img-fluid" height="2px">
+        <!-- <small class="text-white">Copyright &copy; 2021 || Designed By GeekyShows || </small>
+        <img src="{% static 'app/images/payment.png' %}" alt="" srcset="" class="img-fluid" height="2px"> -->
+        <div class="row">
+          <div class="col-sm-4">
+            <a class="navbar-brand" href="/"><img src="{% static 'app/images/logo.png' %}" alt="" srcset=""></a>
+          </div>
+          <div class="col-sm-6">
+            <a class="navbar-brand" href="/"><img src="{% static 'app/images/logo.png' %}" alt="" srcset=""></a>
+          </div>
+        </div>
     </footer> <!-- End Footer -->
 
     <!-- Jquery -->

@@ -1,0 +1,45 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Buy Now{% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+ <div class="row">
+  <div class="col-sm-3">
+    <ul class="list-group">
+        <a href="{% url 'laptop' %}" class="list-group-item active">Laptop</a>
+        <a href="{% url 'laptopdata' 'below' %}" class="list-group-item">Below 300</a>
+        <a href="{% url 'laptopdata' 'above' %}" class="list-group-item">Below 450</a>
+        <a href="{% url 'laptopdata' 'highest' %}" class="list-group-item">Above 500</a>
+        
+      </ul>
+  </div>
+  <div class="col-sm-8 offset-sm-1">
+   <div class="row">
+       {% for product in laptop %}
+       <div class="col-sm-4 text-center mb-4">
+       <div class="product-card">
+		<div class="badge">Hot</div>
+		<div class="product-tumb">
+			<img src="{{product.product_image.url}}" alt="product_Image">
+		</div>
+		<div class="product-details">
+			<!-- <span class="product-catagory"></span> -->
+			<h4><a href="">{{product.brand}}</a></h4>
+			<p>{{product.title}}</p>
+			<div class="product-bottom-details">
+				<div class="product-price"><small>${{product.selling_price}}</small>${{product.discounted_price}}</div>
+				<div class="product-links">
+					<a href=""><i class="fa fa-heart"></i></a>
+					<a href=""><i class="fa fa-shopping-cart"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+    </div>     
+       {% endfor %}
+       <div class="col-sm-4"></div>
+   </div>
+  </div>
+ </div>
+</div>
+{% endblock main-content %}
