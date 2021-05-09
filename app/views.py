@@ -60,4 +60,4 @@ def customerregistration(request):
  return render(request, 'app/customerregistration.html')
 
 def checkout(request):
- return render(request, 'app/checkout.html')
+ return render(request, 'app/module.html')

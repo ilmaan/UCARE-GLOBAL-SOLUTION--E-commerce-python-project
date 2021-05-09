@@ -2,8 +2,11 @@
 {% load static %}
 {% block title %}Home{% endblock title %}
 
+
 {% block banner_slider %}
+
 <!--Banner Slider-->
+
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -29,6 +32,8 @@
   </a>
 </div>
 <!-- End Banner Slider -->
+
+
 {% endblock banner_slider %}
 
 {% block livesale %}
@@ -285,3 +290,4 @@
     <br><span class="fs-5">$<s>{{ntf.selling_price}}</s> $ {{ntf.discounted_price}}</span>
   </div></a>
   {% endfor %}
+  
