@@ -53,6 +53,58 @@ def laptop(request,data=None):
 
     return render(request, 'app/laptop.html',{'laptop':laptop})
 
+def computer(request,data=None):
+    if data == None:
+        computer = Product.objects.filter(category='CR')
+    elif data =='below':
+        computer = Product.objects.filter(category='CR').filter(discounted_price__lt=701)
+    elif data =='above':
+        computer = Product.objects.filter(category='CR').filter(discounted_price__lt=1101) 
+    elif data =='highest':
+        computer = Product.objects.filter(category='CR').filter(discounted_price__gt=1101)       
+
+    return render(request, 'app/computer.html',{'computer':computer})
+
+def printer(request,data=None):
+    if data == None:
+        printer = Product.objects.filter(category='PR')
+    elif data =='below':
+        printer = Product.objects.filter(category='PR').filter(discounted_price__lt=701)
+    elif data =='above':
+        printer = Product.objects.filter(category='PR').filter(discounted_price__lt=1101) 
+    elif data =='highest':
+        printer = Product.objects.filter(category='PR').filter(discounted_price__gt=1101)       
+
+    return render(request, 'app/printer.html',{'printer':printer})
+
+def antivirus(request,data=None):
+    if data == None:
+        antivirus = Product.objects.filter(category='AV')
+    elif data =='below':
+        antivirus = Product.objects.filter(category='AV').filter(discounted_price__lt=701)
+    elif data =='above':
+        antivirus = Product.objects.filter(category='AV').filter(discounted_price__lt=1101) 
+    elif data =='highest':
+        antivirus = Product.objects.filter(category='AV').filter(discounted_price__gt=1101)       
+
+    return render(request, 'app/antivirus.html',{'antivirus':antivirus})
+
+def camera(request,data=None):
+    if data == None:
+        camera = Product.objects.filter(category='CA')
+    elif data =='below':
+        camera = Product.objects.filter(category='CA').filter(discounted_price__lt=121)
+    elif data =='above':
+        camera = Product.objects.filter(category='CA').filter(discounted_price__lt=160) 
+    elif data =='highest':
+        camera = Product.objects.filter(category='CA').filter(discounted_price__gt=171)       
+
+    return render(request, 'app/camera.html',{'camera':camera})
+
+
+
+
+
 def login(request):
  return render(request, 'app/login.html')
 

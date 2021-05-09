@@ -6,16 +6,16 @@
  <div class="row">
   <div class="col-sm-3">
     <ul class="list-group">
-        <a href="{% url 'laptop' %}" class="list-group-item active">Laptop</a>
-        <a href="{% url 'laptopdata' 'below' %}" class="list-group-item">Below 300</a>
-        <a href="{% url 'laptopdata' 'above' %}" class="list-group-item">Below 450</a>
-        <a href="{% url 'laptopdata' 'highest' %}" class="list-group-item">Above 500</a>
+        <a href="{% url 'camera' %}" class="list-group-item active">Camera</a>
+        <a href="{% url 'cameradata' 'below' %}" class="list-group-item">Budget Friendly</a>
+        <a href="{% url 'cameradata' 'above' %}" class="list-group-item">Mid Range </a>
+        <a href="{% url 'cameradata' 'highest' %}" class="list-group-item">Professional Camera</a>
         
       </ul>
   </div>
   <div class="col-sm-8 offset-sm-1">
    <div class="row">
-       {% for product in laptop %}
+       {% for product in camera %}
        <div class="col-sm-4 text-center mb-4">
        <div class="product-card">
 		

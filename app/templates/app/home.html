@@ -7,44 +7,374 @@
 
 <!--Banner Slider-->
 
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="{% static 'app/images/banner/b1.jpg' %}" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'app/images/banner/b2.jpg' %}" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'app/images/banner/b3.jpg' %}" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'app/images/banner/b4.jpg' %}" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </a>
-</div>
 <!-- End Banner Slider -->
+<!-- STAR WARS SLIDER -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" rel="stylesheet" >
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+<div class="wrapper">
+
+  <div class="content">
+    <div class="bg-shape">
+      <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1536405214/starwars/logo.png" alt="">
+    </div>
+
+    
+    <div class="product-img">
+
+      <div class="product-img__item" id="img1">
+        <img src="{% static 'app/images/3d/laptop3d2.png' %}" alt="star wars" class="product-img__img">
+      </div>
+
+      <div class="product-img__item" id="img2">
+        <img src="{% static 'app/images/3d/laptop3d6.png' %}" alt="star wars" class="product-img__img">
+      </div>
+
+      <div class="product-img__item" id="img3">
+        <img src="{% static 'app/images/3d/laptop3d7.png' %}" alt="star wars" class="product-img__img">
+      </div>
+
+      <div class="product-img__item" id="img4">
+        <img src="{% static 'app/images/3d/laptop3d4.png' %}" alt="star wars" class="product-img__img">
+      </div>
+
+
+    </div>
+
+
+
+    <div class="product-slider">
+      <button class="prev disabled">
+        <span class="icon">
+          <svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-left"></use></svg>
+        </span>
+      </button>
+      <button class="next">
+        <span class="icon">
+          <svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
+        </span>
+      </button>
+
+      <div class="product-slider__wrp swiper-wrapper">
+        <div class="product-slider__item swiper-slide" data-target="img4">
+          <div class="product-slider__card">
+            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1536405223/starwars/item-4-bg.jpg" alt="star wars" class="product-slider__cover">
+            <div class="product-slider__content">
+              <h1 class="product-slider__title">
+                POWERFULL GAMING DESKTOPS
+              </h1>
+              <div class="product-labels__title">Staring from</div><span class="product-slider__price">$399</span>
+              <div class="product-ctr">
+                <div class="product-labels">
+                  <div class="product-labels__title">RAM SIZE</div>
+
+                  <div class="product-labels__group">
+                    <label class="product-labels__item">
+                      <input type="radio" class="product-labels__checkbox" name="type5" >
+                      <span class="product-labels__txt">8GB</span>
+                    </label>
+
+                    <label class="product-labels__item">
+                      <input type="radio" class="product-labels__checkbox" name="type5" checked>
+                      <span class="product-labels__txt">12GB</span>
+                    </label>
+
+                    <label class="product-labels__item">
+                      <input type="radio" class="product-labels__checkbox" name="type5" >
+                      <span class="product-labels__txt">16GB</span>
+                    </label>
+
+                    <label class="product-labels__item">
+                      <input type="radio" class="product-labels__checkbox" name="type5" >
+                      <span class="product-labels__txt">32GB</span>
+                    </label>
+
+                  </div>
+
+                </div>
+
+                <span class="hr-vertical"></span>
+
+                <div class="product-inf">
+                  <div class="product-inf__percent">
+                    <div class="product-inf__percent-circle">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                        <defs>
+                          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#0c1e2c" stop-opacity="0" />
+                            <stop offset="100%" stop-color="#cb2240" stop-opacity="1" />
+                          </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="47" stroke-dasharray="240, 300" stroke="#cb2240" stroke-width="4" fill="none"/>
+                      </svg>
+                    </div>
+                    <div class="product-inf__percent-txt">
+                      80%
+                    </div>
+                  </div>
+
+                  <span class="product-inf__title">DURABILITY RATE</span>
+                </div>
+
+              </div>
+
+              <div class="product-slider__bottom">
+                <button class="product-slider__cart">
+                  ADD TO CART
+                </button>
+
+                <button class="product-slider__fav js-fav"><span class="heart"></span> ADD TO WISHLIST</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-slider__item swiper-slide" data-target="img1">
+          <div class="product-slider__card">
+            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1536405222/starwars/item-1-bg.jpg" alt="star wars" class="product-slider__cover">
+            <div class="product-slider__content">
+              <h1 class="product-slider__title">
+                Best in Gaming<br> Laptops
+              </h1>
+              <div class="product-labels__title">Starting from</div><span class="product-slider__price">$499</span>
+              <div class="product-ctr">
+                <div class="product-labels">
+                  <div class="product-labels__title">ENGINE UNIT</div>
+
+                  <div class="product-labels__group">
+                    <label class="product-labels__item">
+                      <input type="radio" class="product-labels__checkbox" name="type1" checked>
+                      <span class="product-labels__txt">Intel</span>
+                    </label>
+
+                    <label class="product-labels__item">
+                      <input type="radio" class="product-labels__checkbox" name="type1">
+                      <span class="product-labels__txt">Nvidia</span>
+                    </label>
+                  </div>
+
+                </div>
+
+                <span class="hr-vertical"></span>
+
+                <div class="product-inf">
+                  <div class="product-inf__percent">
+                    <div class="product-inf__percent-circle">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                        <defs>
+                          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#0c1e2c" stop-opacity="0" />
+                            <stop offset="100%" stop-color="#cb2240" stop-opacity="1" />
+                          </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="47" stroke-dasharray="225, 300" stroke="#cb2240" stroke-width="4" fill="none"/>
+                      </svg>
+                    </div>
+                    <div class="product-inf__percent-txt">
+                      75%
+                    </div>
+                  </div>
+
+                  <span class="product-inf__title">DURABILITY</span>
+                </div>
+
+              </div>
+
+              <div class="product-slider__bottom">
+                <button class="product-slider__cart">
+                  ADD TO CART
+                </button>
+
+                <button class="product-slider__fav js-fav"><span class="heart"></span> ADD TO WISHLIST</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-slider__item swiper-slide" data-target="img2">
+          <div class="product-slider__card">
+            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1536405222/starwars/item-2-bg.jpg" alt="star wars" class="product-slider__cover">
+            <div class="product-slider__content">
+              <h1 class="product-slider__title">
+                PowerFull Machine & Workstations
+              </h1>
+              <div class="product-labels__title">Starting From</div><span class="product-slider__price">$699</span>
+              <div class="product-ctr">
+                <div class="product-labels">
+                  <div class="product-labels__title">VOLTAGE RANGE</div>
+
+                  <div class="product-labels__group">
+                    <label class="product-labels__item">
+                      <input type="radio" class="product-labels__checkbox" name="type3" checked>
+                      <span class="product-labels__txt">2000 <sup>WATT</sup></span>
+                    </label>
+
+                    <label class="product-labels__item">
+                      <input type="radio" class="product-labels__checkbox" name="type3">
+                      <span class="product-labels__txt">2800 <sup>WATT</sup></span>
+                    </label>
+                  </div>
+
+                  <div class="product-labels__title">AVAILABLE SIZES</div>
+
+                  <div class="product-labels__group">
+                    <label class="product-labels__item">
+                      <input type="radio" class="product-labels__checkbox" name="type2" >
+                      <span class="product-labels__txt">S</span>
+                    </label>
+
+                    <label class="product-labels__item">
+                      <input type="radio" class="product-labels__checkbox" name="type2" checked>
+                      <span class="product-labels__txt">M</span>
+                    </label>
+
+                    <label class="product-labels__item">
+                      <input type="radio" class="product-labels__checkbox" name="type2" >
+                      <span class="product-labels__txt">L</span>
+                    </label>
+                  </div>
+
+                </div>
+
+                <span class="hr-vertical"></span>
+
+                <div class="product-inf">
+                  <div class="product-inf__percent">
+                    <div class="product-inf__percent-circle">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                        <defs>
+                          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#0c1e2c" stop-opacity="0" />
+                            <stop offset="100%" stop-color="#cb2240" stop-opacity="1" />
+                          </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="47" stroke-dasharray="240, 300" stroke="#cb2240" stroke-width="4" fill="none"/>
+                      </svg>
+                    </div>
+                    <div class="product-inf__percent-txt">
+                      80%
+                    </div>
+                  </div>
+
+                  <span class="product-inf__title">DURABILITY</span>
+                </div>
+
+              </div>
+
+              <div class="product-slider__bottom">
+                <button class="product-slider__cart">
+                  ADD TO CART
+                </button>
+
+                <button class="product-slider__fav js-fav"><span class="heart"></span> ADD TO WISHLIST</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-slider__item swiper-slide" data-target="img3">
+          <div class="product-slider__card">
+            <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1536405215/starwars/item-3-bg.jpg" alt="star wars" class="product-slider__cover">
+            <div class="product-slider__content">
+              <h1 class="product-slider__title">
+                Select from wide range of Printers
+              </h1>
+              <div class="product-labels__title">Starting from</div><span class="product-slider__price">$99</span>
+              <div class="product-ctr">
+                <div class="product-labels">
+                  <div class="product-labels__title">Choose from</div>
+
+                  <div class="product-labels__group">
+                    <label class="product-labels__item">
+                      <input type="radio" class="product-labels__checkbox" name="type6" checked>
+                      <span class="product-labels__txt">Black&White</span>
+                    </label>
+
+                    <label class="product-labels__item">
+                      <input type="radio" class="product-labels__checkbox" name="type6">
+                      <span class="product-labels__txt">Colored</span>
+                    </label>
+                  </div>
+
+                  <div class="product-labels__title"></div>
+
+                  <div class="product-labels__group">
+                    <label class="product-labels__item">
+                      <input type="radio" class="product-labels__checkbox" name="type7" checked>
+                      <span class="product-labels__txt">Laser Jet</span>
+                    </label>
+
+                    <label class="product-labels__item">
+                      <input type="radio" class="product-labels__checkbox" name="type7">
+                      <span class="product-labels__txt">Refiller</span>
+                    </label>
+                  </div>
+
+                </div>
+
+                <span class="hr-vertical"></span>
+
+                <div class="product-inf">
+                  <div class="product-inf__percent">
+                    <div class="product-inf__percent-circle">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                        <defs>
+                          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#0c1e2c" stop-opacity="0" />
+                            <stop offset="100%" stop-color="#cb2240" stop-opacity="1" />
+                          </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="47" stroke-dasharray="240, 300" stroke="#cb2240" stroke-width="4" fill="none"/>
+                      </svg>
+                    </div>
+                    <div class="product-inf__percent-txt">
+                      80%
+                    </div>
+                  </div>
+
+                  <span class="product-inf__title">DURABILITY RATE</span>
+                </div>
+
+              </div>
+
+              <div class="product-slider__bottom">
+                <button class="product-slider__cart">
+                  ADD TO CART
+                </button>
+
+                <button class="product-slider__fav js-fav"><span class="heart"></span> ADD TO WISHLIST</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+</div>
+<svg class="hidden" hidden>
+  <symbol id="icon-arrow-left" viewBox="0 0 32 32">
+    <path d="M0.704 17.696l9.856 9.856c0.896 0.896 2.432 0.896 3.328 0s0.896-2.432 0-3.328l-5.792-5.856h21.568c1.312 0 2.368-1.056 2.368-2.368s-1.056-2.368-2.368-2.368h-21.568l5.824-5.824c0.896-0.896 0.896-2.432 0-3.328-0.48-0.48-1.088-0.704-1.696-0.704s-1.216 0.224-1.696 0.704l-9.824 9.824c-0.448 0.448-0.704 1.056-0.704 1.696s0.224 1.248 0.704 1.696z"></path>
+  </symbol>
+  <symbol id="icon-arrow-right" viewBox="0 0 32 32">
+    <path d="M31.296 14.336l-9.888-9.888c-0.896-0.896-2.432-0.896-3.328 0s-0.896 2.432 0 3.328l5.824 5.856h-21.536c-1.312 0-2.368 1.056-2.368 2.368s1.056 2.368 2.368 2.368h21.568l-5.856 5.824c-0.896 0.896-0.896 2.432 0 3.328 0.48 0.48 1.088 0.704 1.696 0.704s1.216-0.224 1.696-0.704l9.824-9.824c0.448-0.448 0.704-1.056 0.704-1.696s-0.224-1.248-0.704-1.664z"></path>
+  </symbol>
+</svg>
+
+<!-- STAR WAR SLIDER ENDS -->
 
 {% endblock banner_slider %}
 
 {% block livesale %}
 <!-- Live Sale Section -->
-<div class="container">
-  <div class="row bg-danger text-center p-5 text-white border-bottom shadow">
-    <h1>SALE IS LIVE NOW</h1>
-    <span>5% Instant Discount on Axis Bank Credit and Debit Card</span>
-    <small class="fw-lighter">Term and Condition Applied (For details visit Bank's official Website)</small>
-  </div>
-</div>
+
 <!-- End Live Sale Section -->
 {% endblock livesale %}
 
@@ -64,7 +394,7 @@
           </div>
           <div class="product-details">
             <!-- <span class="product-catagory"></span> -->
-            <h4><a href="">{{product.brand}}</a></h4>
+            <h4><a href="">{{lap.brand}}</a></h4>
             <p>{{lap.title}}</p>
             <div class="product-bottom-details">
               <div class="product-price"><small>${{lap.selling_price}}</small>${{lap.discounted_price}}</div>
@@ -81,7 +411,39 @@
 
   </div>
   <!-- End 1st Product Slider -->
-
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'app/images/banner/printerslider2.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/banner/laptopslider2.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/banner/printerslider2.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/banner/laptopslider1.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/banner/printerslider3.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/banner/laptopslider1.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/banner/laptopslider3.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div> 
   <!-- Payment Info Section -->
   <div class="container my-5">
     <div class="row">
@@ -118,8 +480,8 @@
   <!-- End Payment Info Section -->
 
   <!-- 2nd Product Slider -->
-  <div class="mx-3">
-    <h2>Printers </h2>
+  <div class="mx-3"> 
+  <img src="{% static 'app/images/banner/printerslider4.jpg' %}" class="d-block w-100" alt="...">
     <!-- Slider 2 -->
     <div class="owl-carousel" id="slider2">
       {% for ptr in printer %}
@@ -155,6 +517,9 @@
   <div class="mx-3">
     <h2>Computers </h2>
     <!-- Slider 3 -->
+    <div class="row">
+      
+      <div class="col-sm-9">
     <div class="owl-carousel" id="slider2">
 
       {% for cmp in computer %} <div>
@@ -182,12 +547,18 @@
       {% endfor %}
     </div>
   </div>
+  <div class="col-sm-3">
+    <img src="{% static 'app/images/3d/gamingbanner1.png' %}" alt="Product img" class="updown" width="auto" style="animation: TopBottomShake 20s infinite;" height="auto">
+    
+  </div>
+</div>
+  </div>
   <!-- End 3nd Product Slider -->
   <br>
   <!-- 4nd Product Slider -->
   <div class="mx-3">
-    <h2>Camera </h2>
     <!-- Slider 4 -->
+  <img src="{% static 'app/images/banner/cameralslider2.gif' %}" class="d-block w-100" alt="...">
     <div class="owl-carousel" id="slider2">
       {% for cmr in camera %} <div>
         <a href="{% url 'product-detail' cmr.id %}">
@@ -218,7 +589,7 @@
   <br>
   <!-- 5nd Product Slider -->
   <div class="mx-3">
-    <h2>Antivirus </h2>
+    <h2 id="antivirus">Antivirus </h2>
     <!-- Slider 5 -->
     <div class="owl-carousel" id="slider2">
       {% for avr in antivirus %} <div>
