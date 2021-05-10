@@ -120,9 +120,9 @@
               </div>
 
               <div class="product-slider__bottom">
-                <button class="product-slider__cart">
-                  ADD TO CART
-                </button>
+                <a href="{% url 'computer' %}"><button class="product-slider__cart">
+                  View Products
+                </button></a>
 
                 <button class="product-slider__fav js-fav"><span class="heart"></span> ADD TO WISHLIST</button>
               </div>
@@ -181,9 +181,9 @@
               </div>
 
               <div class="product-slider__bottom">
-                <button class="product-slider__cart">
-                  ADD TO CART
-                </button>
+                <a href="{% url 'laptop' %}"><button class="product-slider__cart">
+                  View Products
+                </button></a>
 
                 <button class="product-slider__fav js-fav"><span class="heart"></span> ADD TO WISHLIST</button>
               </div>
@@ -262,9 +262,9 @@
               </div>
 
               <div class="product-slider__bottom">
-                <button class="product-slider__cart">
-                  ADD TO CART
-                </button>
+                <a href="{% url 'laptop' %}"><button class="product-slider__cart">
+                  View Products
+                </button></a>
 
                 <button class="product-slider__fav js-fav"><span class="heart"></span> ADD TO WISHLIST</button>
               </div>
@@ -338,9 +338,9 @@
               </div>
 
               <div class="product-slider__bottom">
-                <button class="product-slider__cart">
-                  ADD TO CART
-                </button>
+                <a href="{% url 'printer' %}"><button class="product-slider__cart">
+                  View Products
+                </button></a>
 
                 <button class="product-slider__fav js-fav"><span class="heart"></span> ADD TO WISHLIST</button>
               </div>
@@ -380,6 +380,12 @@
 
 {% block main-content %}
 <!-- 1st Product Slider -->
+<div class="row" style="width: 80%;margin: 0 auto">
+  <div class="col-sm-6"><img src="{% static 'app/images/3d/l1.jpg' %}" class="d-block w-100" alt="..."></div>
+  <div class="col-sm-6"><img src="{% static 'app/images/3d/l2.jpg' %}" class="d-block w-100" alt="..."></div>
+  <div class="col-sm-6"><img src="{% static 'app/images/3d/l3.jpg' %}" class="d-block w-100" alt="..."></div>
+  <div class="col-sm-6"><img src="{% static 'app/images/3d/l4.jpg' %}" class="d-block w-100" alt="..."></div>
+</div>
 <div class="m-3">
   <h2>Laptop Deals</h2>
   <!-- Slider 1 -->
@@ -410,6 +416,56 @@
     {% endfor %}
 
   </div>
+
+  <!-- Payment Info Section -->
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="card mb-3">
+          <div class="card-body">
+            <img src="{% static 'app/images/3d/i1.jpg' %}" alt="" srcset="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="card mb-3">
+          <div class="card-body">
+            <img src="{% static 'app/images/3d/i2.jpg' %}" alt="" srcset="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="card mb-3">
+          <div class="card-body">
+            <img src="{% static 'app/images/3d/i3.jpg' %}" alt="" srcset="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="card mb-3">
+          <div class="card-body">
+            <img src="{% static 'app/images/3d/i4.jpg' %}" alt="" srcset="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="card mb-3">
+          <div class="card-body">
+            <img src="{% static 'app/images/3d/i5.jpg' %}" alt="" srcset="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="card mb-3">
+          <div class="card-body">
+            <img src="{% static 'app/images/3d/i6.jpg' %}" alt="" srcset="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Payment Info Section -->
+
   <!-- End 1st Product Slider -->
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -444,40 +500,7 @@
     <span class="visually-hidden">Next</span>
   </a>
 </div> 
-  <!-- Payment Info Section -->
-  <div class="container my-5">
-    <div class="row">
-      <div class="col-sm-3">
-        <div class="card mb-3">
-          <div class="card-body">
-            <img src="{% static 'app/images/payavail/cc.jpg' %}" alt="" srcset="" class="img-fluid">
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card mb-3">
-          <div class="card-body">
-            <img src="{% static 'app/images/payavail/upi.jpg' %}" alt="" srcset="" class="img-fluid">
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card mb-3">
-          <div class="card-body">
-            <img src="{% static 'app/images/payavail/nb.jpg' %}" alt="" srcset="" class="img-fluid">
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card mb-3">
-          <div class="card-body">
-            <img src="{% static 'app/images/payavail/bj.jpg' %}" alt="" srcset="" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Payment Info Section -->
+  
 
   <!-- 2nd Product Slider -->
   <div class="mx-3"> 
@@ -621,7 +644,7 @@
   <br>
   <!-- 6nd Product Slider -->
   <div class="mx-3">
-    <h2>Antivirus </h2>
+    <h2>Networking Products </h2>
     <!-- Slider 6 -->
     <div class="owl-carousel" id="slider2">
       {% for ntf in network_firewall %}
