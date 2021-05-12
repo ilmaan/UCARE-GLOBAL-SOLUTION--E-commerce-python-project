@@ -107,8 +107,8 @@ def camera(request,data=None):
 
 
 
-def login(request):
- return render(request, 'app/login.html')
+# def login(request):
+#  return render(request, 'app/login.html')
 
 # def customerregistration(request):
 #  return render(request, 'app/customerregistration.html')
