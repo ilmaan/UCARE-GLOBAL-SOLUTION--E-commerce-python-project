@@ -5,7 +5,7 @@ from app import views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import authenticate, views as auth_views
-from .forms import LoginForm, MyPasswordChangeForm
+from .forms import LoginForm, MyPasswordChangeForm, MyPasswordResetForm
 
 urlpatterns = [
     
@@ -16,7 +16,7 @@ urlpatterns = [
     path('profile/', views.profile, name='profile'),
     path('address/', views.address, name='address'),
     path('orders/', views.orders, name='orders'),
-    path('changepassword/', views.change_password, name='changepassword'),
+    # path('changepassword/', views.change_password, name='changepassword'),
     path('laptop/', views.laptop, name='laptop'),
     path('laptop/<slug:data>', views.laptop, name='laptopdata'),
     path('printer/', views.printer, name='printer'),
@@ -30,7 +30,9 @@ urlpatterns = [
     # path('login/', views.login, name='login'),
     path('accounts/login/', auth_views.LoginView.as_view(template_name='app/login.html', authentication_form=LoginForm), name='login'),
     path('logout/',auth_views.LogoutView.as_view(next_page='home'),name='logout'),
-    path('passwordchange/',auth_views.PasswordChangeView.as_view(template_name='app/passwordchange.html',form_class=MyPasswordChangeForm),name='passwordchange'),
+    path('passwordchange/',auth_views.PasswordChangeView.as_view(template_name='app/passwordchange.html',success_url='/passwordchangedone/', form_class=MyPasswordChangeForm),name='passwordchange'),
+    path('passwordchangedone/',auth_views.PasswordChangeView.as_view(template_name='app/passwordchangedone.html'),name='passwordchangedone'),
+    path('password-reset/',auth_views.PasswordResetView.as_view(template_name='app/password_reset.html',form_class=MyPasswordResetForm),name='password_reset'),
     # path('registration/', views.customerregistration, name='customerregistration'),
     path('registration/', views.CustomerRegistrationView.as_view(), name='customerregistration'),
     path('checkout/', views.checkout, name='checkout'),
