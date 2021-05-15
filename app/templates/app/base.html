@@ -66,7 +66,7 @@
                             {% if request.user.is_authenticated %}
                             <div class="top_bar_user">
                                 <div class="user_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918647/user.svg" alt=""></div>
-                                <div><a href="#">Hi User</a></div>
+                                <div><a href="#">Hi {{request.user}}</a></div>
                                 <div><a href="{% url 'logout' %}">Logout</a></div>
                             </div>
                         {% else %}
@@ -116,7 +116,7 @@
                         <div class="main_nav_menu">
                           <ul class="standard_dropdown main_nav_dropdown">
                               {% if request.user.is_authenticated %}
-                              <li class="hassubs"> <a href="#">USER<i class="fas fa-chevron-down"></i></a>
+                              <li class="hassubs"> <a href="#">{{request.user}}<i class="fas fa-chevron-down"></i></a>
                                 <ul>
                                     <li> <a  href="{% url 'profile' %}">Profile<i class="fas fa-chevron-down"></i></a></li>
                                     <li><a href="{% url 'orders' %}">Orders<i class="fas fa-chevron-down"></i></a></li>
@@ -240,7 +240,7 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
            <li class="nav-item dropdown mx-2">
               <a class="nav-link dropdown-toggle text-white" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Sonam
+                {{request.user}}
               </a>
               <ul class="dropdown-menu" aria-labelledby="profileDropdown">
                 <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
