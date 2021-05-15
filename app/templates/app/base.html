@@ -63,11 +63,20 @@
                                     </li>
                                 </ul>
                             </div>
+                            {% if request.user.is_authenticated %}
                             <div class="top_bar_user">
                                 <div class="user_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918647/user.svg" alt=""></div>
-                                <div><a href="#">Register</a></div>
-                                <div><a href="#">Sign in</a></div>
+                                <div><a href="#">Hi User</a></div>
+                                <div><a href="{% url 'logout' %}">Logout</a></div>
                             </div>
+                        {% else %}
+                        <div class="top_bar_user">
+                            <div class="user_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918647/user.svg" alt=""></div>
+                            <div><a href="{% url 'customerregistration' %}">Register</a></div>
+                            <div><a href="{% url 'login' %}">Sign in</a></div>
+                        </div>
+                            {% endif %}
+                            
                         </div>
                     </div>
                 </div>
@@ -79,7 +88,7 @@
                     <!-- Logo -->
                     <div class="col-lg-2 col-sm-3 col-3 order-1">
                         <div class="logo_container">
-                            <div class="logo"><a href="#">UCARE</a></div>
+                            <div class="logo"><a href="{% url 'home' %}">UCARE</a></div>
                         </div>
                     </div> <!-- Search -->
                     <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
@@ -106,7 +115,18 @@
                         <!-- Main Nav Menu -->
                         <div class="main_nav_menu">
                           <ul class="standard_dropdown main_nav_dropdown">
-                              <li><a href="#">Home<i class="fas fa-chevron-down"></i></a></li>
+                              {% if request.user.is_authenticated %}
+                              <li class="hassubs"> <a href="#">USER<i class="fas fa-chevron-down"></i></a>
+                                <ul>
+                                    <li> <a  href="{% url 'profile' %}">Profile<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="{% url 'orders' %}">Orders<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="{% url 'changepassword' %}">Change Password<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="#">Logout<i class="fas fa-chevron-down"></i></a></li>
+                                </ul>
+                            </li>
+                              {% endif %}
+                            
+                              <!-- <li><a href="#">Home<i class="fas fa-chevron-down"></i></a></li> -->
                               <li class="hassubs"> <a href="#">Categories<i class="fas fa-chevron-down"></i></a>
                                   <ul>
                                       <li> <a href="#">Laptop&computer<i class="fas fa-chevron-down"></i></a>
@@ -162,7 +182,7 @@
                                         <div class="cart_count"><span>0</span></div>
                                     </div>
                                     <div class="cart_content">
-                                        <div class="cart_text"><a href="#">Cart</a></div>
+                                        <div class="cart_text"><a href="{% url 'add-to-cart' %}">Cart</a></div>
                                         <div class="cart_price">$0</div>
                                     </div>
                                 </div>
