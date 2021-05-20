@@ -417,6 +417,70 @@
 
   </div>
 
+   <!-- 5nd Product Slider -->
+   <div class="mx-3">
+    <h2 id="antivirus">Antivirus </h2>
+    <!-- Slider 5 -->
+    
+    <div class="owl-carousel" id="slider2">
+      {% for avr in antivirus %} 
+      {% if request.user.is_authenticated %}
+      
+    
+      <div>
+        <a href="{% url 'product-detail' avr.id %}">
+          <div class="product-card">
+            <!-- <div class="badge">Hot</div> -->
+            <div class="product-tumb">
+              <img src="{{avr.product_image.url}}" alt="product_Image">
+            </div>
+            <div class="product-details">
+              <!-- <span class="product-catagory"></span> -->
+              <h4><a href="">{{avr.brand}}</a></h4>
+              <p>{{avr.title}}</p>
+              <div class="product-bottom-details">
+                <div class="product-price"><small>${{avr.selling_price}}</small>${{avr.discounted_price}}</div>
+                <div class="product-links">
+                  <a href=""><i class="fa fa-shopping-bag"></i></a>
+                  <a href="{% url 'product-detail' avr.id %}"><i class="fa fa-shopping-cart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% else %}
+      
+    
+      <div>
+        <a href="{% url 'customerregistration' %}">
+          <div class="product-card">
+            <!-- <div class="badge">Hot</div> -->
+            <div class="product-tumb">
+              <img src="{{avr.product_image.url}}" alt="product_Image">
+            </div>
+            <div class="product-details">
+              <!-- <span class="product-catagory"></span> -->
+              <h4><a href="">{{avr.brand}}</a></h4>
+              <p>{{avr.title}}</p>
+              <div class="product-bottom-details">
+                <div class="product-price"><small>${{avr.selling_price}}</small>${{avr.discounted_price}}</div>
+                <div class="product-links">
+                  <a href=""><i class="fa fa-shopping-bag"></i></a>
+                  <a href="{% url 'product-detail' avr.id %}"><i class="fa fa-shopping-cart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <!-- End 5nd Product Slider -->
+  <br>
+
   <!-- Payment Info Section -->
   <div class="container my-5">
     <div class="row">
@@ -610,69 +674,7 @@
   </div>
   <!-- End 4nd Product Slider -->
   <br>
-  <!-- 5nd Product Slider -->
-  <div class="mx-3">
-    <h2 id="antivirus">Antivirus </h2>
-    <!-- Slider 5 -->
-    
-    <div class="owl-carousel" id="slider2">
-      {% for avr in antivirus %} 
-      {% if request.user.is_authenticated %}
-      
-    
-      <div>
-        <a href="{% url 'product-detail' avr.id %}">
-          <div class="product-card">
-            <!-- <div class="badge">Hot</div> -->
-            <div class="product-tumb">
-              <img src="{{avr.product_image.url}}" alt="product_Image">
-            </div>
-            <div class="product-details">
-              <!-- <span class="product-catagory"></span> -->
-              <h4><a href="">{{avr.brand}}</a></h4>
-              <p>{{avr.title}}</p>
-              <div class="product-bottom-details">
-                <div class="product-price"><small>${{avr.selling_price}}</small>${{avr.discounted_price}}</div>
-                <div class="product-links">
-                  <a href=""><i class="fa fa-shopping-bag"></i></a>
-                  <a href="{% url 'product-detail' avr.id %}"><i class="fa fa-shopping-cart"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      {% else %}
-      
-    
-      <div>
-        <a href="{% url 'customerregistration' %}">
-          <div class="product-card">
-            <!-- <div class="badge">Hot</div> -->
-            <div class="product-tumb">
-              <img src="{{avr.product_image.url}}" alt="product_Image">
-            </div>
-            <div class="product-details">
-              <!-- <span class="product-catagory"></span> -->
-              <h4><a href="">{{avr.brand}}</a></h4>
-              <p>{{avr.title}}</p>
-              <div class="product-bottom-details">
-                <div class="product-price"><small>${{avr.selling_price}}</small>${{avr.discounted_price}}</div>
-                <div class="product-links">
-                  <a href=""><i class="fa fa-shopping-bag"></i></a>
-                  <a href="{% url 'product-detail' avr.id %}"><i class="fa fa-shopping-cart"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-  <!-- End 5nd Product Slider -->
-  <br>
+ 
   <!-- 6nd Product Slider -->
   <div class="mx-3">
     <h2 id="networking">Networking Products </h2>
