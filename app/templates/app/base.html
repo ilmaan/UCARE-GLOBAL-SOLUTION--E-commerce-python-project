@@ -34,23 +34,22 @@
     <header class="header">
         <!-- Top Bar -->
         <div class="top_bar">
-            <div class="container-flex">
-                <div class="row">
-                    <div class="col d-flex flex-row">
-                        <div class="top_bar_contact_item">
+            <div class="row container">
+                <!-- <div class="row"> -->
+                    <!-- <div class="col d-flex flex-row"> -->
+                        <div class=" col-lg-2 top_bar_contact_item">
                             <div class="top_bar_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918577/phone.png" alt=""></div>1 800 893 1175 Toll Free No
                         </div>
-                        <div class="top_bar_contact_item">
-                            <div class="top_bar_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918597/mail.png" alt=""></div><a href="mailto:info@ucareglobalsolutions.com">info@ucareglobalsolutions.com     .</a>
-                        </div>
-                      <div class="top_bar_contact_item">
-                            <div class="top_bar_icon"></div><a href="mailto:sales@ucareglobalsolutions.com">sales@ucareglobalsolutions.com</a>
+                        <div class="col-lg-6 top_bar_contact_item">
+                            <div class="top_bar_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918597/mail.png" alt=""></div><a href="mailto:info@ucareglobalsolutions.com">info@ucareglobalsolutions.com</a>
+                            <div class="top_bar_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918597/mail.png" alt=""></div><a href="mailto:sales@ucareglobalsolutions.com">sales@ucareglobalsolutions.com</a>
                         </div>
                       
                       
-                        <div class="top_bar_content ml-auto">
-                            <div class="top_bar_menu">
-                                <ul class="standard_dropdown top_bar_dropdown">
+                      
+                        <!-- <div class=" top_bar_content ml-auto"> -->
+                            <!-- <div class="col top_bar_menu">
+                                <ul class=" standard_dropdown top_bar_dropdown">
                                     <li> <a href="#">English<i class="fas fa-chevron-down"></i></a>
   
                                     </li>
@@ -62,26 +61,28 @@
                                         </ul>
                                     </li>
                                 </ul>
-                            </div>
-                            {% if request.user.is_authenticated %}
-                            <div class="top_bar_user">
+                            </div>-->
+                            {% if request.user.is_authenticated %} 
+                            <div class="col-lg-2 top_bar_user">
                                 <div class="user_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918647/user.svg" alt=""></div>
                                 <div><a href="#">Hi {{request.user}}</a></div>
                                 <div><a href="{% url 'logout' %}">Logout</a></div>
                             </div>
                         {% else %}
-                        <div class="top_bar_user">
+                        <div class="col-lg-2 top_bar_user">
                             <div class="user_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918647/user.svg" alt=""></div>
                             <div><a href="{% url 'customerregistration' %}">Register</a></div>
                             <div><a href="{% url 'login' %}">Sign in</a></div>
                         </div>
                             {% endif %}
                             
-                        </div>
-                    </div>
-                </div>
+                        <!-- </div> -->
+                    <!-- </div> -->
+                <!-- </div> -->
             </div>
-        </div> <!-- Header Main -->
+        </div> 
+        
+        <!-- Header Main -->
         <div class="header_main">
             <div class="container">
                 <div class="row">
@@ -131,14 +132,14 @@
                                   <ul>
                                       <li> <a href="#">Laptop&computer<i class="fas fa-chevron-down"></i></a>
                                           <ul>
-                                              <li><a href="#">Laptop</i></a></li>
-                                              <li><a href="#">Computer</i></a></li>
+                                              <li><a href="{% url 'laptop' %}">Laptop</i></a></li>
+                                              <li><a href="{% url 'computer' %}">Computer</i></a></li>
                                           </ul>
                                       </li>
-                                      <li><a href="#">Cameras</a></li>
-                                      <li><a href="#">Printer</a></li>
-                                      <li><a href="#">Antivirus</a></li>
-                                      <li><a href="#">Networking Products</a></li>
+                                      <li><a href="{% url 'camera' %}">Cameras</a></li>
+                                      <li><a href="{% url 'printer' %}">Printer</a></li>
+                                      <li><a href="#antivirus">Antivirus</a></li>
+                                      <li><a href="#networking">Networking Products</a></li>
                                   </ul>
                               </li>
                               <li class="hassubs"> <a href="#">Featured Brands<i class="fas fa-chevron-down"></i></a>
@@ -155,7 +156,7 @@
                                       <li><a href="#">DELL<i class="fas fa-chevron-down"></i></a></li>
                                   </ul>
                               </li>
-                              <li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
+                              <li><a href="#footer">Contact<i class="fas fa-chevron-down"></i></a></li>
                           </ul>
                       </div> <!-- Menu Trigger -->
                       <div class="menu_trigger_container ml-auto">
